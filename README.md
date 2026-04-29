@@ -2,6 +2,20 @@
 
 GenTexLab is a research-oriented framework for benchmarking text-to-texture generation systems. It separates prompt construction, model execution, evaluation, result storage, recommendation, dashboarding, and report generation so teams can compare generative models with reproducible experiment definitions.
 
+## Example Results
+
+### Wood Texture
+
+![wood](assets/wood.png)
+
+### Metal Texture
+
+![metal](assets/metal.png)
+
+### Stone Texture
+
+![stone](assets/stone.png)
+
 ## What It Does
 
 - Runs benchmark experiments from JSON or YAML configs
