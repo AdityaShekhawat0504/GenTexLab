@@ -1,6 +1,7 @@
-# GenTexLab
+# GenTexLab — Benchmarking Generative Models for Text-to-Texture Synthesis
 
-GenTexLab is a research-oriented framework for benchmarking text-to-texture generation systems. It separates prompt construction, model execution, evaluation, result storage, recommendation, dashboarding, and report generation so teams can compare generative models with reproducible experiment definitions.
+GenTexLab is a research-oriented framework for evaluating generative AI models for texture synthesis. It enables reproducible benchmarking of models such as Stable Diffusion using custom metrics designed for real-world 3D applications, including seamless tiling and frequency artifacts.
+
 
 ## Example Results
 
@@ -26,6 +27,20 @@ GenTexLab is a research-oriented framework for benchmarking text-to-texture gene
 - Saves generated assets, structured metrics, summaries, and recommendations
 - Exposes a Streamlit dashboard for browsing results and model rankings
 - Builds a PDF report titled `Benchmarking Generative Models for Text-to-Texture Synthesis`
+
+## Key Findings
+
+- Stable Diffusion produces visually realistic textures but does not guarantee seamless tiling
+- Wood textures show higher stability and tiling consistency compared to metal
+- Prompt engineering ("seamless") improves results but does not eliminate artifacts
+- Significant prompt sensitivity observed for complex materials such as stone
+
+## Engineering Challenges & Solutions
+
+- Stable Diffusion safety checker falsely flagged texture prompts, resulting in black outputs → disabled for texture-only workflow
+- Apple MPS backend produced degenerate images in float16 → switched to float32 for correct inference
+- Initial runs produced misleadingly perfect metrics → validated via pixel statistics and reran experiments
+- Added tiled texture previews and improved dashboard/report outputs for better evaluation
 
 ## Repository Layout
 
