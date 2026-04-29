@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# OS files
+.DS_Store
+
+# Testing / cache
+.pytest_cache/
+
+# Streamlit
+.streamlit/
+
+# Model weights & caches
+cache/
+models/
+*.ckpt
+*.safetensors
+
+# Experiment outputs (keep repo lightweight)
+results/*
+!results/README.md
+
+# Logs
+*.log

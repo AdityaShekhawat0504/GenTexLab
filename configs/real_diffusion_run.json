@@ -1,0 +1,27 @@
+{
+  "experiment_name": "real-diffusion-run",
+  "models": [
+    {
+      "name": "stable-diffusion",
+      "model_id": "runwayml/stable-diffusion-v1-5",
+      "provider": "diffusers",
+      "guidance_scale": 7.5,
+      "num_inference_steps": 12,
+      "precision": "float16",
+      "device": "auto",
+      "disable_safety_checker": true
+    }
+  ],
+  "prompts": [
+    "seamless wood texture, PBR, high detail, 4k",
+    "seamless metal surface, industrial, roughness variation",
+    "seamless stone texture, natural, high detail"
+  ],
+  "num_samples": 3,
+  "metrics": ["clip_score", "seam_score", "tiling_score", "fft_score", "stability_score"],
+  "seed": 42,
+  "width": 512,
+  "height": 512,
+  "negative_prompt": "text, watermark, logo, frame, people, object, scene",
+  "notes": "CPU pilot benchmark using Stable Diffusion v1.5 with reproducible seeds."
+}

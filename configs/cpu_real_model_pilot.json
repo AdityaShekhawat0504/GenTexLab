@@ -1,0 +1,22 @@
+{
+  "experiment_name": "gentexlab-cpu-real-model-pilot",
+  "models": [
+    {
+      "name": "stable-diffusion",
+      "model_id": "runwayml/stable-diffusion-v1-5",
+      "provider": "diffusers",
+      "guidance_scale": 7.0,
+      "num_inference_steps": 12,
+      "precision": "float16",
+      "device": "auto"
+    }
+  ],
+  "prompt_categories": ["wood"],
+  "num_samples": 1,
+  "metrics": ["clip_score", "seam_score", "tiling_score", "fft_score"],
+  "seed": 42,
+  "width": 256,
+  "height": 256,
+  "negative_prompt": "text, watermark, logo, frame"
+}
+

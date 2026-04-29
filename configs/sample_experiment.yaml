@@ -1,0 +1,26 @@
+experiment_name: gentexlab-yaml-benchmark
+models:
+  - procedural-baseline
+  - name: stable-diffusion
+    model_id: runwayml/stable-diffusion-v1-5
+    provider: diffusers
+    guidance_scale: 7.5
+    num_inference_steps: 30
+prompt_categories:
+  - wood
+  - metal
+  - fabric
+  - stone
+  - plastic
+num_samples: 2
+metrics:
+  - clip_score
+  - seam_score
+  - tiling_score
+  - fft_score
+  - stability_score
+seed: 42
+width: 256
+height: 256
+negative_prompt: text, watermark, logo, frame
+

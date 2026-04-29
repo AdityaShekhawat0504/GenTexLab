@@ -1,0 +1,29 @@
+{
+  "experiment_name": "gentexlab-sample-benchmark",
+  "models": [
+    "procedural-baseline",
+    {
+      "name": "stable-diffusion",
+      "model_id": "runwayml/stable-diffusion-v1-5",
+      "provider": "diffusers",
+      "guidance_scale": 7.5,
+      "num_inference_steps": 30
+    },
+    {
+      "name": "sdxl",
+      "model_id": "stabilityai/stable-diffusion-xl-base-1.0",
+      "provider": "diffusers",
+      "guidance_scale": 5.0,
+      "num_inference_steps": 28
+    }
+  ],
+  "prompt_categories": ["wood", "metal", "fabric", "stone", "plastic"],
+  "num_samples": 3,
+  "metrics": ["clip_score", "seam_score", "tiling_score", "fft_score", "stability_score"],
+  "seed": 42,
+  "width": 256,
+  "height": 256,
+  "negative_prompt": "text, watermark, logo, frame",
+  "notes": "Reference benchmark for text-to-texture model comparison."
+}
+

@@ -1,0 +1,11 @@
+{
+  "experiment_name": "gentexlab-procedural-smoke-test",
+  "models": ["procedural-baseline"],
+  "prompt_categories": ["wood", "metal", "fabric"],
+  "num_samples": 2,
+  "metrics": ["seam_score", "tiling_score", "fft_score", "stability_score"],
+  "seed": 7,
+  "width": 128,
+  "height": 128
+}
+
